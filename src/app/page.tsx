@@ -13,6 +13,7 @@ import {ArrowDownToLine} from 'lucide-react';
 import {Alert, AlertDescription, AlertTitle} from '@/components/ui/alert';
 import * as XLSX from 'xlsx';
 import {Textarea} from '@/components/ui/textarea';
+import {Toaster} from "@/components/ui/toaster";
 
 interface Student {
   name: string;
@@ -24,6 +25,8 @@ interface Student {
 }
 
 const defaultMarks = Array(5).fill('');
+
+const showTableInitialState = false;
 
 const Home = () => {
   const [students, setStudents] = useState<Student[]>([]);
